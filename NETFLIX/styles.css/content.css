@@ -1,0 +1,114 @@
+.contents-container span{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.contents-container{
+    /* 콘텐츠 명이랑 콘텐츠는 위아래로 있어야함 */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.contents1,
+.contents2,
+.contents3{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.content-img{
+    margin-left: 40px;
+}
+
+.contents1 .img:hover,
+.contents2 .img:hover,
+.contents3 .img:hover{
+    cursor: pointer;
+    transform: scale(1.8);
+    overflow: visible;
+    z-index: 1000;
+}
+
+.contents1 .img,
+.contents2 .img,
+.contents3 .img{
+    height: 125px;
+}
+
+::-webkit-scrollbar{
+    height: 7px
+}
+
+::-webkit-scrollbar-track {
+    background: #4D4D4D; /* 트랙의 배경색 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: white; /* 핸들의 배경색 */
+}
+
+.contents-container .scroll-right1-button,
+.contents-container .scroll-right2-button,
+.contents-container .scroll-right3-button{
+    width: 100%;
+    opacity: 0.7;
+}
+
+.contents-container #scroll-right1,
+.contents-container #scroll-right2,
+.contents-container #scroll-right3{
+    height: 125px;
+    width: 30px;
+    position: absolute;
+    background-color: #999999;
+    opacity: 0;
+    border: none;
+    right: 0px;
+    top: 59px;
+}
+
+.contents-container #scroll-right1:hover,
+.contents-container #scroll-right2:hover,
+.contents-container #scroll-right3:hover{
+    opacity: 0.8;
+}
+
+.contents-container .scroll-left1-button,
+.contents-container .scroll-left2-button,
+.contents-container .scroll-left3-button{
+    width: 100%;
+    opacity: 0.7;
+}
+
+.contents-container #scroll-left1,
+.contents-container #scroll-left2,
+.contents-container #scroll-left3{
+    height: 125px;
+    width: 30px;
+    position: absolute;
+    background-color: #999999;
+    opacity: 0;
+    border: none;
+    left: 0;
+    top: 59px;
+}
+
+.contents-container #scroll-left1:hover,
+.contents-container #scroll-left2:hover,
+.contents-container #scroll-left3:hover{
+    opacity: 0.8;
+}

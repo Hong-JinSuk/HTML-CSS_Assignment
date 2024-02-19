@@ -1,0 +1,120 @@
+.header{
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background-color: #262626;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-top-color: #4D4D4D;
+    /* opacity: 0; */
+}
+
+/* left-section */
+
+.left-section{
+    display: flex;
+    align-items: center;
+}
+
+.netflix-logo{
+    height: 24px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.left-section-page a{
+    color: #999999;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+div a:last-child {
+    margin-right: 0;
+}
+
+.left-section-page a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.4;
+    color: lightblue;
+}
+
+/* right-section */
+
+.right-section{
+    height: auto;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.search-icon,
+.notification-icon,
+.profile-icon{
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.search-icon-container .tooltip{
+    position: absolute;
+    background-color: lightgray;
+    color: whitesmoke;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -18px;
+    right: 88px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+.profile-icon-container .tooltip{
+    position: absolute;
+    background-color: lightgray;
+    color: whitesmoke;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -18px;
+    right: 12px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.notification-icon-container .notification-count{
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    top: 12px;
+    right: 53px;
+}
+
+.search-icon-container:hover .tooltip,
+.profile-icon-container:hover .tooltip{
+    opacity: 1;
+    color: black;
+    cursor: pointer;
+}
