@@ -10,7 +10,9 @@ class UI {
       this.showAlert();
       return;
     }
+
     // showProfile
+    this.profile.innerHTML = ``;
   }
 
   showRepos(repos) {
@@ -18,7 +20,15 @@ class UI {
       this.showAlert();
       return;
     }
-    //showRepos
+
+    // repeat showRepos
+    let displayRepo = "";
+    repos.froEach(function (repo) {
+      displayRepo += ``;
+    });
+
+    // display repos
+    document.getElementById("repos").innerHTML = displayRepo;
   }
 
   showAlert() {}
