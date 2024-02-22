@@ -10,6 +10,7 @@ class UI {
       this.showAlert();
       return;
     }
+    console.log(user);
 
     // showProfile
     this.profile.innerHTML = `
@@ -35,6 +36,10 @@ class UI {
         </div>
       </div>
       <br>
+      <br>
+      <h3 class = "page-heading mb-3">contributions for a year</h3>
+      <img src="https://ghchart.rshah.org/${user.login}"/>
+      <br><br><br>
       <h3 class="page-heading mb-3">Latest Repos</h3>
       <div id="repos"></div>
     `;
