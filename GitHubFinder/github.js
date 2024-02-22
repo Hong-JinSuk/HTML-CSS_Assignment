@@ -1,8 +1,9 @@
 // get user data
 class Github {
   constructor() {
-    this.client_id = ""; // personal key
-    this.client_secret = ""; // personal key
+    // 임시로 제 깃허브 client id 와 secret를 넣어놨습니다.
+    this.client_id = "1182b6d2256d1ff3aeae"; // personal key
+    this.client_secret = "2836a4e66c069bcaa72b1eb0c691404169d748c6"; // personal key
     this.repos_count = 5;
     this.repos_sort = "created: asc";
   }
