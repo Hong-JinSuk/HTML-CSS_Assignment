@@ -12,6 +12,15 @@ class UI {
     }
     console.log(user);
 
+    fetch(
+      `https://raw.githubusercontent.com/${user.login}/${user.login}/main/README.md`
+    )
+      .then((response) => response.text())
+      .then((text) => {
+        // Markdown to HTML
+        document.getElementById("readme").innerHTML = marked.parse(text);
+      });
+
     // showProfile
     this.profile.innerHTML = `
     <div class="card card-body mb-3">
@@ -36,6 +45,8 @@ class UI {
         </div>
       </div>
       <br>
+      <h3>${user.login}'s Overview</h3>
+      <div id="readme" class="markdown-body"></div>
       <br>
       <h3 class = "page-heading mb-3">contributions for a year</h3>
       <img src="https://ghchart.rshah.org/${user.login}"/>
